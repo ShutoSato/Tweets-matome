@@ -1,13 +1,9 @@
-mecab-python3
-libmecab2
-libmecab-dev
 mecab
 mecab-ipadic
 mecab-ipadic-utf8
 mecab-utils
-locales
 pip
-setuptools
+mecab-python3
 oseti
 tweepy
 python-dotenv
