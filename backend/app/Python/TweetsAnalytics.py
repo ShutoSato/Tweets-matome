@@ -42,7 +42,7 @@ for tweet in api.search_tweets(q=searchCommand, lang='ja', result_type='recent',
 # ツイート数の入れ直し
 NumberOfAllTweets = len(Tweets)
 # osetiで解析をかける
-negaPosiResults = list(map(analyzer.analyze, TweetsAnalytics))
+negaPosiResults = list(map(analyzer.analyze, [TweetsAnalytics]))
 # 変数定義
 NumberOfPositiveTweets = 0 # positiveツイートの数
 NumberOfNeutralTweets = 0 # neutralツイートの数
