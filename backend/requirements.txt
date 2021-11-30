@@ -1,5 +1,4 @@
 mecab-python3
-libssl-dev
 libmecab2
 libmecab-dev
 mecab
