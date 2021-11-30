@@ -1,4 +1,4 @@
-mecab
+mecab==0.996.3
 mecab-ipadic
 mecab-ipadic-utf8
 mecab-utils
