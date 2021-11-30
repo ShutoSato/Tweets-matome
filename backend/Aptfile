@@ -1,0 +1,16 @@
+# you can list packages
+libzip-dev
+libicu-dev
+libonig-dev
+wget
+gcc
+make
+zlib1g-dev
+libssl-dev
+libmecab2
+libmecab-dev
+mecab
+mecab-ipadic
+mecab-ipadic-utf8
+mecab-utils
+locales

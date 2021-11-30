@@ -1,8 +1,5 @@
-mecab==0.996.3
-mecab-ipadic
-mecab-ipadic-utf8
-mecab-utils
 pip
+setuptools
 mecab-python3
 oseti
 tweepy
