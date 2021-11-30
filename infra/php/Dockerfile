@@ -25,11 +25,7 @@ RUN apt-get update && \
   rm -rf /var/lib/apt/lists/* && \
   docker-php-ext-install intl pdo_mysql zip bcmath && \
   localedef -f UTF-8 -i ja_JP ja_JP.UTF-8 && \
-  composer require abraham/twitteroauth && \
-  git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git && \
-  cd mecab-ipadic-neologd && \
-  ./bin/install-mecab-ipadic-neologd -n -a && \
-  echo `mecab-config --dicdir`"/mecab-ipadic-neologd"
+  composer require abraham/twitteroauth
 
 COPY ./php.ini /usr/local/etc/php/php.ini
 
