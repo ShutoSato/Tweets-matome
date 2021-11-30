@@ -3,22 +3,30 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Vender\executePython;
 
 class PythonController extends Controller
 {
-    public function index() {
-        return view('index');
-    }
+    // Python処理
     public function executePython(Request $request) {
         // 検索ワードの取得
         $searchWord = $request->searchWord;
-        // Pythonのファイルがあるパスを設定
-        $path = app_path() . "/Python/sample.py";
-        // コマンドの作成
-        $command = "python " . $path . " sample1　" . $searchWord;
-        // python実行コマンド, 結果を$outputsに詰めてくれる, $rtnにstatusを返す
-        exec($command, $outputs, $rtn);
-        // ddで出力
-        dd($outputs, $command, $rtn);
+        // 取得するツイート数
+        $NumberOfTweets = 20;
+        // Python処理の呼び出し
+        $excutePython = new executePython($searchWord, $NumberOfTweets, $request);
+        // Python処理実行、結果を$resultに格納
+        $result = $excutePython->executePython($request);
+        // もしツイートが見つからなかったら
+        if($result['NumberOfTweets'] == 0){
+            $request->session()->put('NumberOfTweets', 0);
+            return redirect()->route('showResult', [
+                'searchWord' => $searchWord,
+            ]);
+        }
+        // redirect
+        return redirect()->route('showResult', [
+            'searchWord' => $searchWord,
+        ]);
     }
 }
