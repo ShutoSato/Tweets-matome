@@ -15,7 +15,3 @@ mecab-ipadic-utf8
 mecab-utils
 locales
 git make curl xz-utils file
-git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git
-mecab-ipadic-neologd
-./bin/install-mecab-ipadic-neologd -n
-echo yes | mecab-unidic-neologd/bin/install-mecab-unidic-neologd -n
