@@ -7,10 +7,11 @@ gcc
 make
 zlib1g-dev
 libssl-dev
+mecab
 libmecab2
 libmecab-dev
-mecab
 mecab-ipadic
 mecab-ipadic-utf8
 mecab-utils
 locales
+git make curl xz-utils file
