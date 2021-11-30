@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 load_dotenv()
 # twitterApiKeyの取得
 # os.environを用いて環境変数から取得
-consumer_key = os.getenv('CONSUMER_KEY')
+consumer_key = os.environ.getenv('CONSUMER_KEY')
 consumer_secret = os.environ.get('CONSUMER_SECRET')
 access_key = os.environ.get('ACCESS_TOKEN')
 access_secret = os.environ.get('ACCESS_TOKEN_SECRET')
