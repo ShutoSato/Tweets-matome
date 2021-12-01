@@ -1,6 +1,4 @@
-pip
-setuptools
 oseti
+mecab-python3
 tweepy
 python-dotenv
-unidic-lite

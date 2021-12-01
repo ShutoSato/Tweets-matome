@@ -1,17 +1,3 @@
 # you can list packages
-libzip-dev
-libicu-dev
-libonig-dev
-wget
-gcc
-make
-zlib1g-dev
-libssl-dev
-mecab
-libmecab2
-libmecab-dev
-mecab-ipadic
-mecab-ipadic-utf8
-mecab-utils
 locales
 git make curl xz-utils file
