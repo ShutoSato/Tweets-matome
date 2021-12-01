@@ -2,3 +2,6 @@
 locales
 git make curl xz-utils file
 mecab libmecab-dev mecab-ipadic-utf8 git make curl xz-utils file -y
+clean
+locale-gen ja_JP.UTF-8
+localedef -f UTF-8 -i ja_JP ja_JP.UTF-8
