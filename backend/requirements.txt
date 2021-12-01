@@ -4,4 +4,3 @@ mecab-python3
 oseti
 tweepy
 python-dotenv
-unidic-lite
