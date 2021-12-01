@@ -3,3 +3,4 @@ setuptools
 oseti
 tweepy
 python-dotenv
+unidic-lite
