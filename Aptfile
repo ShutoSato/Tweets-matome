@@ -1,3 +1,4 @@
 # you can list packages
 locales
 git make curl xz-utils file
+mecab libmecab-dev mecab-ipadic-utf8 git make curl xz-utils file -y
