@@ -1,4 +1,3 @@
-mecab
 oseti
 mecab-python3
 tweepy
