@@ -20,7 +20,7 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_key, access_secret)
 api = tweepy.API(auth)
 # Mecab(tokenizer)準備
-tokenizer = MeCab.Tagger('-r /dev/null -d /app/.heroku/python/lib/python3.6/site-packages/unidic_lite/dicdir/mecabrc')
+tokenizer = MeCab.Tagger('-r /dev/null -d /app/.heroku/python/lib/python3.6/site-packages/unidic_lite/dicdir')
 tokenizer.parse("")
 #osetiの準備
 analyzer = oseti.Analyzer()
