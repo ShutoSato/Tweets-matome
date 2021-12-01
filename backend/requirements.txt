@@ -1,6 +1,6 @@
 pip
 setuptools
-mecab-python3==0.7
+mecab-python3
 oseti
 tweepy
 python-dotenv
