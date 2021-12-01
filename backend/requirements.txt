@@ -3,4 +3,3 @@ oseti
 mecab-python3
 tweepy
 python-dotenv
---no-binary :all: mecab-python3
