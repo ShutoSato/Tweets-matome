@@ -23,7 +23,7 @@ api = tweepy.API(auth)
 tokenizer = MeCab.Tagger()
 tokenizer.parse("")
 #osetiの準備
-analyzer = oseti.Analyzer()
+analyzer = oseti.Analyzer('-r /usr/local/etc/mecabrc')
 #配列準備
 Tweets = [] # ツイートを格納する配列
 TweetsAnalytics = [] # 解析する用のツイートを格納する配列
@@ -42,8 +42,7 @@ for tweet in api.search_tweets(q=searchCommand, lang='ja', result_type='recent',
 # ツイート数の入れ直し
 NumberOfAllTweets = len(Tweets)
 # osetiで解析をかける
-a=map(analyzer.analyze, TweetsAnalytics)
-negaPosiResults = list(a)
+negaPosiResults = list(map(analyzer.analyze, TweetsAnalytics))
 # 変数定義
 NumberOfPositiveTweets = 0 # positiveツイートの数
 NumberOfNeutralTweets = 0 # neutralツイートの数
