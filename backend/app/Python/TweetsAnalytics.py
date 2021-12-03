@@ -24,7 +24,7 @@ api = tweepy.API(auth)
 tokenizer = MeCab.Tagger(ipadic.MECAB_ARGS)
 tokenizer.parse("")
 #osetiの準備
-analyzer = oseti.Analyzer('mecab_args=ipadic.MECAB_ARGS')
+analyzer = oseti.Analyzer(mecab_args=ipadic.MECAB_ARGS)
 #配列準備
 Tweets = [] # ツイートを格納する配列
 TweetsAnalytics = [] # 解析する用のツイートを格納する配列
