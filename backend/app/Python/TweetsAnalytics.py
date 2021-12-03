@@ -25,8 +25,6 @@ tokenizer = MeCab.Tagger('-r /dev/null -d /app/.heroku/python/lib/python3.6/site
 tokenizer.parse("")
 #osetiの準備
 analyzer = oseti.Analyzer('mecab_args=ipadic.MECAB_ARGS')
-test = analyzer.analyze('天国で待ってる。')
-print(test)
 #配列準備
 Tweets = [] # ツイートを格納する配列
 TweetsAnalytics = [] # 解析する用のツイートを格納する配列
