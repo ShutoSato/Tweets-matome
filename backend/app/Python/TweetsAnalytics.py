@@ -24,7 +24,7 @@ api = tweepy.API(auth)
 tokenizer = MeCab.Tagger('-r /dev/null -d /app/.heroku/python/lib/python3.6/site-packages/unidic_lite/dicdir')
 tokenizer.parse("")
 #osetiの準備
-analyzer = oseti.Analyzer(mecab_args=ipadic.MECAB_ARGS)
+analyzer = oseti.Analyzer('mecab_args=ipadic.MECAB_ARGS')
 test = analyzer.analyze('天国で待ってる。')
 print(test)
 #配列準備
