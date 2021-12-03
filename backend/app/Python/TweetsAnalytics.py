@@ -5,6 +5,7 @@ import oseti
 import tweepy
 import io
 import os
+import ipadic
 from dotenv import load_dotenv
 
 # .envファイルの内容を読み込む
@@ -23,7 +24,7 @@ api = tweepy.API(auth)
 tokenizer = MeCab.Tagger('-r /dev/null -d /app/.heroku/python/lib/python3.6/site-packages/unidic_lite/dicdir')
 tokenizer.parse("")
 #osetiの準備
-analyzer = oseti.Analyzer()
+analyzer = oseti.Analyzer(mecab_args=ipadic.MECAB_ARGS)
 #配列準備
 Tweets = [] # ツイートを格納する配列
 TweetsAnalytics = [] # 解析する用のツイートを格納する配列
