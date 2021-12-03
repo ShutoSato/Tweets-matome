@@ -1,3 +1,2 @@
 locales
-git make curl xz-utils file
-git make curl xz-utils file -y
+git make curl xz-utils file tree
