@@ -1,4 +1,5 @@
 oseti
+mecab-python3==1.0.3
 tweepy
 python-dotenv
 ipadic
