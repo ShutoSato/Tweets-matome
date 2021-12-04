@@ -26,7 +26,7 @@
 ###### (基本的にLaravelで構築し、ツイートの解析処理はPython)
 
 ## その他使用技術
-#### オープンソース形態素解析エンジン
+#### 形態素解析エンジン
 - MeCab(http://taku910.github.io/mecab/#feature)
 #### MeCabのPythonラッパー
 - mecab-python3(https://github.com/SamuraiT/mecab-python3)
