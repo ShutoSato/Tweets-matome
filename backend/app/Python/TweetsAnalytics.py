@@ -21,10 +21,10 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_key, access_secret)
 api = tweepy.API(auth)
 # Mecab(tokenizer)準備
-tokenizer = MeCab.Tagger(ipadic.MECAB_ARGS)
+tokenizer = MeCab.Tagger()
 tokenizer.parse("")
 #osetiの準備
-analyzer = oseti.Analyzer(mecab_args=ipadic.MECAB_ARGS)
+analyzer = oseti.Analyzer()
 #配列準備
 Tweets = [] # ツイートを格納する配列
 TweetsAnalytics = [] # 解析する用のツイートを格納する配列
