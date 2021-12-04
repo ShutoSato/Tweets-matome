@@ -16,9 +16,13 @@
 
 ## 開発環境
 Local
+```
 - Docker
+```
 本番
+```
 - Heroku
+```
 
 ## 使用技術
 - Laravel
@@ -26,13 +30,19 @@ Local
 (基本的にLaravelで構築し、ツイートの解析処理はPython)
 
 ## その他使用技術
-MeCab(http://taku910.github.io/mecab/#feature)
 - オープンソース形態素解析エンジン
-mecab-python3(https://github.com/SamuraiT/mecab-python3)
+```
+MeCab(http://taku910.github.io/mecab/#feature)
+```
 - MeCabのPythonラッパー
-oseti(https://github.com/ikegami-yukino/oseti)
+```
+mecab-python3(https://github.com/SamuraiT/mecab-python3)
+```
 - Sentiment Analysis (いわゆるネガポジ判定) ライブラリ
 - 日本語評価極性辞書を用いて文の評価極性 (ポジティブ/ネガティブ) のスコアを計算するもの
+```
+oseti(https://github.com/ikegami-yukino/oseti)
+```
 
 ## Twitter API
 Python library
