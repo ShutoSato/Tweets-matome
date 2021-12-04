@@ -27,14 +27,13 @@
 - ツイート文を形態素解析し、単語を標準形に直すことでランキング化を可能にした
 
 ## 特に頑張ったファイル
-`/Tweets-matome/backend/app/Python/TweetsAnalytics.py`
-ツイートの解析処理を行なっているファイル。
-APIやライブラリの利用, それ以降の処理で使いやすい出力の仕方を頑張った。
-`/Tweets-matome/backend/app/Http/Vender/executePython.php`
-pythonファイルの実行とその出力受け取りを行なっているファイル。
-pythonでのツイート解析の出力結果が全て'$outputs'に入れて返されるので、
-変数や場合分けを用いてそれ以降の処理で使いやすいように出力結果を格納した。
-変数を用いることで、出力形式が変わっても簡単に対応できるようにした。
+- /Tweets-matome/backend/app/Python/TweetsAnalytics.py
+  - ツイートの解析処理を行なっているファイル。
+  - APIやライブラリの利用, それ以降の処理で使いやすい出力の仕方を頑張った。
+- /Tweets-matome/backend/app/Http/Vender/executePython.php
+  - pythonファイルの実行とその出力受け取りを行なっているファイル。
+  - pythonでのツイート解析の出力結果が全て'$outputs'に入れて返されるので、変数や場合分けを用いてそれ以降の処理で使いやすいように出力結果を格納した。
+  - 変数を用いることで、出力形式が変わっても簡単に対応できるようにした。
 
 ## 苦労した点
 - 環境構築
