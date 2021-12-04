@@ -1,4 +1,4 @@
-git+https://github.com/ikegami-yukino/oseti.git
+oseti
 mecab-python3==1.0.3
 tweepy
 python-dotenv
