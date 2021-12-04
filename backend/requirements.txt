@@ -4,3 +4,4 @@ python-dotenv
 ipadic
 neologdn
 sengiri
+git+https://github.com/ikegami-yukino/oseti.git
