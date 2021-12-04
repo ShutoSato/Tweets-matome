@@ -123,6 +123,7 @@ for tweet in Tweets:
         if len(node.surface) >= 2: # 2文字以上のみ格納する
             if node.surface != searchWord: # 検索ワードは含まないようにする
                 if node.surface != 'https' and node.surface != '://' and  node.surface != 'co': # urlは含まないようにする
+                    # 品詞によって処理を分ける
                     if node.feature.split(",")[0] == u"名詞":
                         wordCountOfAll.append(node.surface)
                         # ネガポジ判定の結果によって、ワードカウントの格納を分ける
