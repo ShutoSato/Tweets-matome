@@ -2,5 +2,5 @@ mecab-python3==1.0.3
 tweepy
 python-dotenv
 ipadic
-git+https://github.com/ikegami-yukino/oseti.git
 requests
+git+https://github.com/ikegami-yukino/oseti.git
