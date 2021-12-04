@@ -21,17 +21,17 @@
 - Heroku
 
 ## 使用技術
-#### Laravel
-#### Python
-(基本的にLaravelで構築し、ツイートの解析処理はPython)
+- Laravel
+- Python
+##### (基本的にLaravelで構築し、ツイートの解析処理はPython)
 
 ## その他使用技術
 #### オープンソース形態素解析エンジン
-MeCab(http://taku910.github.io/mecab/#feature)
+-MeCab(http://taku910.github.io/mecab/#feature)
 #### MeCabのPythonラッパー
-mecab-python3(https://github.com/SamuraiT/mecab-python3)
+-mecab-python3(https://github.com/SamuraiT/mecab-python3)
 #### Sentiment Analysis (いわゆるネガポジ判定) ライブラリ
-oseti(https://github.com/ikegami-yukino/oseti)
+-oseti(https://github.com/ikegami-yukino/oseti)
 
 ## Twitter API
 #### Python library
