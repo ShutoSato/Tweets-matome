@@ -1,4 +1,4 @@
-mecab
+oseti
 tweepy
 python-dotenv
 ipadic
