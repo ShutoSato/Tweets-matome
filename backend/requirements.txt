@@ -1,3 +1,4 @@
+oseti
 git+https://github.com/ikegami-yukino/oseti.git
 mecab-python3==1.0.3
 tweepy
