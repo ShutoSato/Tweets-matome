@@ -6,6 +6,7 @@ import tweepy
 import io
 import os
 import ipadic
+import requests
 from dotenv import load_dotenv
 
 # .envファイルの内容を読み込む

@@ -3,3 +3,4 @@ tweepy
 python-dotenv
 ipadic
 git+https://github.com/ikegami-yukino/oseti.git
+requests
