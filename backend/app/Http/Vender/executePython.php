@@ -23,11 +23,13 @@ class executePython
     // Python処理
     public function executePython(Request $request) {  
         // Pythonのファイルがあるパスを設定
-        $path = app_path() . "/Python/TweetsAnalytics.py";
+        $path = app_path() . "/Python/test.py";
         // コマンドの作成
         $command = "export LANG=ja_JP.UTF-8; python " . $path . " " . $this->searchWord  . " " . $this->NumberOfTweets;
+        $command = "export LANG=ja_JP.UTF-8; python " . $path;
         // python実行コマンド, 結果を$outputsに詰めてくれる, $rtnにstatusを返す
         exec($command, $outputs, $rtn);
+        dd($outputs);
         // ------ $outputsを使いやすく分ける ------
         // twitterApi呼び出し
         $twitterApi = new CallTwitterApi();
