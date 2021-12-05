@@ -20,7 +20,7 @@ RUN apt-get update && \
   make && make install && \
   ln -s /usr/local/python/bin/python3.6 /usr/local/bin/python && \
   ln -s /usr/local/python/bin/pip3.6 /usr/local/bin/pip && \
-  pip install --upgrade pip setuptools mecab-python3 oseti tweepy python-dotenv ipadic git+https://github.com/ikegami-yukino/oseti.git requests && \
+  pip install --upgrade pip setuptools mecab-python3 oseti tweepy python-dotenv ipadic requests && \
   cp /etc/mecabrc /usr/local/etc/ && \
   rm -rf /var/lib/apt/lists/* && \
   docker-php-ext-install intl pdo_mysql zip bcmath && \
