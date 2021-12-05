@@ -14,6 +14,13 @@
 - 目的に応じて詳細表示
 - ツイートをRT順,いいね順,時系列順に並べ替え
 
+## システム概要
+- 基本的にLaravelで構築
+- ツイートの解析処理だけPython
+  - 形態素解析はMeCab(mecab-python3)
+  - ネガポジ判定はoseti
+- TwitterAPIはTweepy,TwitterOAuth
+
 ## 作成するにあたって工夫した点
 - 実際に使うことを想定して作成した
   - シンプルで分かりやすい機能とデザイン
@@ -75,7 +82,7 @@
 
 ## Twitter API
 #### Python library
-- tweepy(https://www.tweepy.org)
+- Tweepy(https://www.tweepy.org)
 #### PHP library
 - TwitterOAuth(https://twitteroauth.com)
 
