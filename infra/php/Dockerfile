@@ -28,5 +28,5 @@ RUN apt-get update && \
   composer require abraham/twitteroauth
 
 COPY ./php.ini /usr/local/etc/php/php.ini
-CMD vendor/bin/heroku-php-apache2 public/
+
 WORKDIR /work
