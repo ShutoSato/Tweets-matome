@@ -3,3 +3,5 @@ tweepy
 python-dotenv
 ipadic
 requests
+sengiri
+neologdn
