@@ -29,7 +29,6 @@ class executePython
         $command = "python " . $path;
         // python実行コマンド, 結果を$outputsに詰めてくれる, $rtnにstatusを返す
         exec($command, $outputs, $rtn);
-        dd($outputs);
         // ------ $outputsを使いやすく分ける ------
         // twitterApi呼び出し
         $twitterApi = new CallTwitterApi();
