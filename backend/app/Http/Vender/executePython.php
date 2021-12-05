@@ -26,7 +26,7 @@ class executePython
         $path = app_path() . "/Python/test.py";
         // コマンドの作成
         $command = "export LANG=ja_JP.UTF-8; python " . $path . " " . $this->searchWord  . " " . $this->NumberOfTweets;
-        $command = "export LANG=ja_JP.UTF-8; python " . $path;
+        $command = "python " . $path;
         // python実行コマンド, 結果を$outputsに詰めてくれる, $rtnにstatusを返す
         exec($command, $outputs, $rtn);
         dd($outputs);
