@@ -56,16 +56,16 @@ for negaPosiResult in negaPosiResults:
     # negaPosiResultに文の数ぶん結果が格納されてるから、取り出して平均を出す
     for eachReault in negaPosiResult:
         negaPosiTotal = negaPosiTotal + eachReault # ネガポジの値をnegaPosiTotalに足していく
-    negaPosiAve = negaPosiTotal / len(negaPosiResult) # 合計を文の数で割って、平均を格納
-    Tweets[i][2] = negaPosiAve # ネガポジの値をTweets[]の3つ目に入れる
+    negaPosiValue = negaPosiTotal # negaPosiValueにnegaPosiTotalの値を格納
+    Tweets[i][2] = negaPosiValue # ネガポジの値をTweets[]の3つ目に入れる
     Tweets[i][3] = negaPosiResult # ネガポジの判定内容をTweets[]の4つ目に入れる
     negaPosiTotal = 0 # totalを0に戻す
     # ネガポジごとのツイートの数を数える
-    if negaPosiAve > 0:
+    if negaPosiValue > 0:
         NumberOfPositiveTweets = NumberOfPositiveTweets + 1
-    elif negaPosiAve == 0:
+    elif negaPosiValue == 0:
         NumberOfNeutralTweets = NumberOfNeutralTweets + 1
-    elif negaPosiAve < 0:
+    elif negaPosiValue < 0:
         NumberOfNegativeTweets = NumberOfNegativeTweets + 1
     # 次のツイート
     i = i + 1
@@ -119,7 +119,7 @@ for tweet in Tweets:
     # nodeにtweet[1](ツイート文)をtokenizer(MeCab)による形態素解析でバラバラにして格納する
     node = tokenizer.parseToNode(tweet[1])
     # ネガポジ判定結果をnegaPosiAveに入れる
-    negaPosiAve = tweet[2]
+    negaPosiValue = tweet[2]
     # 単語の格納
     while node:
         if len(node.surface) >= 2: # 2文字以上のみ格納する
@@ -129,29 +129,29 @@ for tweet in Tweets:
                     if node.feature.split(",")[0] == u"名詞":
                         wordCountOfAll.append(node.surface)
                         # ネガポジ判定の結果によって、ワードカウントの格納を分ける
-                        if negaPosiAve > 0:
+                        if negaPosiValue > 0:
                             wordCountOfPosi.append(node.surface)
-                        elif negaPosiAve == 0:
+                        elif negaPosiValue == 0:
                             wordCountOfNeutral.append(node.surface)
-                        elif negaPosiAve < 0:
+                        elif negaPosiValue < 0:
                             wordCountOfNegative.append(node.surface)
                     elif node.feature.split(",")[0] == u"形容詞":
                         wordCountOfAll.append(node.feature.split(",")[6])
                         # ネガポジ判定の結果によって、ワードカウントの格納を分ける
-                        if negaPosiAve > 0:
+                        if negaPosiValue > 0:
                             wordCountOfPosi.append(node.feature.split(",")[6])
-                        elif negaPosiAve == 0:
+                        elif negaPosiValue == 0:
                             wordCountOfNeutral.append(node.feature.split(",")[6])
-                        elif negaPosiAve < 0:
+                        elif negaPosiValue < 0:
                             wordCountOfNegative.append(node.feature.split(",")[6])
                     elif node.feature.split(",")[0] == u"動詞":
                         wordCountOfAll.append(node.feature.split(",")[6])
                         # ネガポジ判定の結果によって、ワードカウントの格納を分ける
-                        if negaPosiAve > 0:
+                        if negaPosiValue > 0:
                             wordCountOfPosi.append(node.feature.split(",")[6])
-                        elif negaPosiAve == 0:
+                        elif negaPosiValue == 0:
                             wordCountOfNeutral.append(node.feature.split(",")[6])
-                        elif negaPosiAve < 0:
+                        elif negaPosiValue < 0:
                             wordCountOfNegative.append(node.feature.split(",")[6])
         node = node.next
 
