@@ -55,13 +55,13 @@
                 </div>
                 <div class="col col-md-5">
                     @if($show == 'detail')
-                            <p style="margin-bottom: 7rem;"></p>
-                            <h4>判定結果: {{$tweet['negaPosiValue']}}</h4>
-                            ----------------------------
-                            @for($i=0;$i<count($tweet['contentsOfNegaPosiJudge']);$i++)
-                                <p style="margin-bottom: 0;">&emsp;- {{$i+1}}文目: {{ $tweet['contentsOfNegaPosiJudge'][$i] }}</p>
-                            @endfor
-                            ----------------------------
+                        <p style="margin-bottom: 7rem;"></p>
+                        <h4>判定結果: {{$tweet['negaPosiValue']}}</h4>
+                        ----------------------------
+                        @for($i=0;$i<count($tweet['negaPosiDetail']);$i++)
+                            <p style="margin-bottom: 0;">&emsp;- {{$i+1}}文目: {{ $tweet['negaPosiDetail'][$i] }}</p>
+                        @endfor
+                        ---------------------------- 
                     @endif
                 </div>
             </div>

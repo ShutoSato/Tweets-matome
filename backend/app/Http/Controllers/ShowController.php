@@ -37,7 +37,7 @@ class ShowController extends Controller
         }
         // 現在ページの取得
         $page = $request->page;
-        // ネガポジ判定内容の詳細表示
+        // ネガポジ判定内容詳細の表示
         $show = $request->show;
         // sessionからtweetsDataを取得
         $tweetsData = $request->session()->get('tweetsData');
@@ -46,7 +46,7 @@ class ShowController extends Controller
             $tweets[] = [
                 'tweetHtml' => $tweetData['tweetHtml'],
                 'negaPosiValue' => $tweetData['negaPosiValue'],
-                'contentsOfNegaPosiJudge' => $tweetData['contentsOfNegaPosiJudge']
+                'negaPosiDetail' => $tweetData['negaPosiDetail']
             ];
         }
         // 配列→コレクションに変更, 変数名を$tweetsHtmlから$tweetsとする

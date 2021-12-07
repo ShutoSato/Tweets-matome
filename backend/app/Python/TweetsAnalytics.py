@@ -36,15 +36,16 @@ NumberOfAllTweets = sys.argv[2] # 取得したいツイートの数
 NumberOfAllTweets = int(NumberOfAllTweets)  # str型からint型に変換
 searchCommand = searchWord + ' exclude:retweets'  # searchCommand = 検索ワード + 検索結果からRTを除外
 negaPosiDefault = 0 # ネガポジのデフォルト値
-contentsOfNegaPosiJudge = [] # ネガポジの判定内容
+negaPosiDetails = [] # ネガポジの判定内容詳細
 # ツイートの取得
 for tweet in api.search_tweets(q=searchCommand, lang='ja', result_type='recent', count=NumberOfAllTweets, tweet_mode='extended'):
-    Tweets.append([tweet.id, tweet.full_text, negaPosiDefault, contentsOfNegaPosiJudge])
+    Tweets.append([tweet.id, tweet.full_text, negaPosiDefault, negaPosiDetails])
     TweetsAnalytics.append(tweet.full_text)
 # ツイート数の入れ直し
 NumberOfAllTweets = len(Tweets)
 # osetiで解析をかける
 negaPosiResults = list(map(analyzer.analyze, TweetsAnalytics))
+negaPosiDetails = list(map(analyzer.analyze_detail, TweetsAnalytics))
 # 変数定義
 NumberOfPositiveTweets = 0 # positiveツイートの数
 NumberOfNeutralTweets = 0 # neutralツイートの数
@@ -58,7 +59,7 @@ for negaPosiResult in negaPosiResults:
         negaPosiTotal = negaPosiTotal + eachReault # ネガポジの値をnegaPosiTotalに足していく
     negaPosiValue = negaPosiTotal # negaPosiValueにnegaPosiTotalの値を格納
     Tweets[i][2] = negaPosiValue # ネガポジの値をTweets[]の3つ目に入れる
-    Tweets[i][3] = negaPosiResult # ネガポジの判定内容をTweets[]の4つ目に入れる
+    Tweets[i][3] = negaPosiDetails[i] # ネガポジの判定内容詳細をTweets[]の4つ目に入れる
     negaPosiTotal = 0 # totalを0に戻す
     # ネガポジごとのツイートの数を数える
     if negaPosiValue > 0:
@@ -84,15 +85,15 @@ print('== Tweet data ==')
 for tweet in Tweets:
     print(tweet[0]) # id
     print(tweet[2]) # ネガポジ値
-    print(tweet[3]) # ネガポジの判定内容
+    print(tweet[3]) # ネガポジの判定内容詳細
     print()
 print('')
-# ネガポジ判定内容の中身
-print('== ネガポジ判定内容の中身 ==')
+# ネガポジ判定内容の詳細
+print('== ネガポジ判定内容詳細 ==')
 for tweet in Tweets:
     print(len(tweet[3])) # ネガポジ判定内容の中身の数
-    for eachReault in tweet[3]:
-        print(eachReault) # ネガポジ判定内容の中身を一文ずつ出力する
+    for eachDetail in tweet[3]:
+        print(eachDetail) # ネガポジ判定内容の中身を一文ずつ出力する
     print()
 # 取得ツイート数
 print('==取得ツイート数==')

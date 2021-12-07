@@ -60,22 +60,22 @@ class executePython
                     'tweetId' => $outputs[$i],
                     'tweetHtml' => $tweetHtml,
                     'negaPosiValue' => $negaPosiValue,
-                    'contentsOfNegaPosiJudge' => null,
+                    'negaPosiDetail' => null,
                     'RT_count' => null,
                     'fav_count' => null,
                 ];
             }
         }
-        // ネガポジ判定内容の中身を格納
+        // ネガポジ判定内容の詳細を格納
         $startLine = $finishLine + 3;
         for($i=0;$i<$this->NumberOfTweets;$i++){
-            $NumberOfNegaPosiJudge = (int)$outputs[$startLine-1];
-            for($n=0;$n<$NumberOfNegaPosiJudge;$n++){
-                $contentsOfNegaPosiJudge[] = (float)$outputs[$startLine + $n];
+            $NumberOfNegaPosiDetail = (int)$outputs[$startLine-1];
+            for($n=0;$n<$NumberOfNegaPosiDetail;$n++){
+                $negaPosiDetail[] = $outputs[$startLine + $n];
             }
-            $tweetsData[$i]['contentsOfNegaPosiJudge'] = $contentsOfNegaPosiJudge;
-            $contentsOfNegaPosiJudge = null;
-            $finishLine = $startLine + $NumberOfNegaPosiJudge;
+            $tweetsData[$i]['negaPosiDetail'] = $negaPosiDetail;
+            $negaPosiDetail = null;
+            $finishLine = $startLine + $NumberOfNegaPosiDetail;
             $startLine = $finishLine + 2;
         }
         // ネガポジ別にtweet数を格納
