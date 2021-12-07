@@ -10,14 +10,15 @@ class executePython
 {
     public $searchWord;
     public $NumberOfTweets;
-    public $request;
     
     // 検索ワードとリクエストの取得
     public function __construct($searchWord, $NumberOfTweets, Request $request)
     {
+        $validated = $request->validate([
+            'searchWord' => 'required',
+        ]);
         $this->searchWord = $searchWord;
         $this->NumberOfTweets = $NumberOfTweets;
-        $this->request = $request;
     }
 
     // Python処理
