@@ -70,9 +70,10 @@ for negaPosiResult in negaPosiResults:
     # 次のツイート
     i = i + 1
 # ネガポジの値を算出、小数点は一桁まで
-posiPer = round(NumberOfPositiveTweets / NumberOfAllTweets * 100, 1)
-neutralPer = round(NumberOfNeutralTweets / NumberOfAllTweets * 100, 1)
-negaPer = round(NumberOfNegativeTweets / NumberOfAllTweets * 100, 1)
+if NumberOfAllTweets != 0:
+    posiPer = round(NumberOfPositiveTweets / NumberOfAllTweets * 100, 1)
+    neutralPer = round(NumberOfNeutralTweets / NumberOfAllTweets * 100, 1)
+    negaPer = round(NumberOfNegativeTweets / NumberOfAllTweets * 100, 1)
 
 # --------- 出力 --------------
 # 検索ワードの出力
