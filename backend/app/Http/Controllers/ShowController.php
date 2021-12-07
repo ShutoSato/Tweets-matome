@@ -93,7 +93,7 @@ class ShowController extends Controller
                 $positiveTweets[] = [
                     'tweetHtml' => $positiveTweetData['tweetHtml'],
                     'negaPosiValue' => $positiveTweetData['negaPosiValue'],
-                    'contentsOfNegaPosiJudge' => $positiveTweetData['contentsOfNegaPosiJudge']
+                    'negaPosiDetail' => $positiveTweetData['negaPosiDetail']
                 ];
             }
             // 配列→コレクションに変更
@@ -141,7 +141,7 @@ class ShowController extends Controller
                 $neutralTweets[] = [
                     'tweetHtml' => $neutralTweetData['tweetHtml'],
                     'negaPosiValue' => $neutralTweetData['negaPosiValue'],
-                    'contentsOfNegaPosiJudge' => $neutralTweetData['contentsOfNegaPosiJudge']
+                    'negaPosiDetail' => $neutralTweetData['negaPosiDetail']
                 ];
             }
             // 配列→コレクションに変更
@@ -189,7 +189,7 @@ class ShowController extends Controller
                  $negativeTweets[] = [
                     'tweetHtml' => $negativeTweetData['tweetHtml'],
                     'negaPosiValue' => $negativeTweetData['negaPosiValue'],
-                    'contentsOfNegaPosiJudge' => $negativeTweetData['contentsOfNegaPosiJudge']
+                    'negaPosiDetail' => $negativeTweetData['negaPosiDetail']
                  ];
             }
             // 配列→コレクションに変更
