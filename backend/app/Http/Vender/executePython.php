@@ -44,8 +44,8 @@ class executePython
                         'NumberOfTweets' => $this->NumberOfTweets // 取得ツイート数を返す
                     ];
                 }else{ // 指定の数よりもツイートが少なかったら
-                    $this->NumberOfTweets = $finishLine - $i -1; // 取得ツイート数を設定し直す
-                    $finishLine = $startLine + $this->NumberOfTweets; // $finishLineも設定し直す
+                    $finishLine = $i; // $finishLineを設定し直す
+                    $this->NumberOfTweets = ($finishLine - $startLine) / 4; // 取得ツイート数を設定し直す
                     break;
                 }
             }else{
