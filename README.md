@@ -15,12 +15,12 @@
 - ツイートをRT順,いいね順,時系列順に並べ替え
 
 ## システム概要
-- 基本的にLaravelで構築 (/Tweets-matome/backend/)
-- ツイートの解析処理だけPython (/Tweets-matome/backend/app/Python/TweetsAnalytics.py)
+- 基本的にLaravelで構築 ( /Tweets-matome/backend/ )
+- ツイートの解析処理だけPython ( /Tweets-matome/backend/app/Python/TweetsAnalytics.py )
   - 形態素解析はMeCab(mecab-python3)
   - ネガポジ判定はoseti
 - TwitterAPIはTweepy,TwitterOAuth
-- Dockerfileは /Tweets-matome/infra/ 内に記述
+- Dockerfileは( /Tweets-matome/infra/ )内に記述
 
 ## 作成するにあたって工夫した点
 - 実際に使うことを想定して作成した
