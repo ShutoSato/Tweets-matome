@@ -25,8 +25,13 @@
   - 形態素解析はMeCab(mecab-python3)
   - ネガポジ判定はoseti
 - TwitterAPIはTweepy,TwitterOAuth
-- Dockerfile
-  - /Tweets-matome/infra/
+- Local環境はDocker, 本番環境はHerokuで構築
+- Docker
+  - /Tweets-matome/docker-compose.yml
+  - Dockerfile
+    - /Tweets-matome/infra/
+- Heroku
+  - /Tweets-matome/heroku.yml
 
 ## 作成するにあたって工夫した点
 - 実際に使うことを想定して作成した
