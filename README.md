@@ -1,5 +1,5 @@
 ## Tweets-matome
-- http://tweets-matome.herokuapp.com
+ http://tweets-matome.herokuapp.com
 
 ## Tweets-matomeとは
 - 自分が知りたいことに対するTwitter上の反応をまとめてくれるアプリ
