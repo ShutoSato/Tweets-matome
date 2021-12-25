@@ -5,7 +5,17 @@
     <div class="input-group mb-3 searchWord">
         <input type="text" class="form-control" aria-describedby="basic-addon1" value="🔍  {{$searchWord}}" disabled>
     </div>
-    @if ($NumberOfTweets == 0)
+    @if ($NumberOfTweets == -1)
+        <div class="errorMessage">
+            <p>申し訳ございません。</p>
+            <p>"{{$searchWord}}" で検索した結果、</p>
+            <p>予期せぬエラーが発生しました。</p>
+            <p>時間を置いて頂くか、検索ワードを変えて再度お試し頂けると幸いです。</p>
+        </div>
+        <div class="backLink" style="margin-top: 20px;">
+            <a href="{{ route('search')}}"> << 検索画面に戻る</a>
+        </div>
+    @elseif ($NumberOfTweets == 0)
         <div class="errorMessage">
             <p>"{{$searchWord}}" で検索した結果、</p>
             <p>ツイートは見つかりませんでした。</p>

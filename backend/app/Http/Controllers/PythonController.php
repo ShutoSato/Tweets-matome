@@ -17,6 +17,13 @@ class PythonController extends Controller
         $excutePython = new executePython($searchWord, $NumberOfTweets, $request);
         // Python処理実行、結果を$resultに格納
         $result = $excutePython->executePython($request);
+        // もしエラーが発生していたら
+        if($result['NumberOfTweets'] == -1){
+            $request->session()->put('NumberOfTweets', -1);
+            return redirect()->route('showResult', [
+                'searchWord' => $searchWord,
+            ]);
+        }
         // もしツイートが見つからなかったら
         if($result['NumberOfTweets'] == 0){
             $request->session()->put('NumberOfTweets', 0);

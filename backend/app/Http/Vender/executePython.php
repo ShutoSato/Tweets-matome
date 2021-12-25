@@ -32,6 +32,12 @@ class executePython
         // ------ $outputsを使いやすく分ける ------
         // twitterApi呼び出し
         $twitterApi = new CallTwitterApi();
+        // もしエラーが起きていたら
+        if($outputs[0] == null){
+            return [
+                'NumberOfTweets' => -1 // 取得ツイート数でエラーを返す
+            ];
+        }
         // tweetDataを格納
         $startLine = 3;
         $finishLine = $startLine + ($this->NumberOfTweets*4);
