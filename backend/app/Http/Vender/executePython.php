@@ -33,7 +33,7 @@ class executePython
         // twitterApi呼び出し
         $twitterApi = new CallTwitterApi();
         // もしエラーが起きていたら
-        if($outputs[0] == null){
+        if($outputs == null){
             return [
                 'NumberOfTweets' => -1 // 取得ツイート数でエラーを返す
             ];
